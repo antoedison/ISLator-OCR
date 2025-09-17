@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Simple OCR Upload</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; max-width: 900px; margin:auto;}
+    pre { background:#f6f6f6; padding:15px; white-space:pre-wrap;}
+    img { max-width: 100%; height: auto; }
+    h3 { margin-top: 25px; }
+  </style>
+</head>
+<body>
+  <h2>Upload an image for OCR</h2>
+  <form method="post" enctype="multipart/form-data">
+    <input type="file" name="file" accept="image/*" required>
+    <select name="backend">
+      <option value="tesseract">Tesseract</option>
+      <option value="easyocr">EasyOCR</option>
+    </select>
+    <button type="submit">Upload & OCR</button>
+  </form>
+
+  {% if img_url %}
+    <h3>Uploaded image:</h3>
+    <img src="{{ img_url }}" alt="uploaded image">
+  {% endif %}
+
+  {% if text %}
+    <h3>Extracted text:</h3>
+    <pre>{{ text }}</pre>
+  {% endif %}
+
+  {% if gloss %}
+    <h3>Glossed sentence:</h3>
+    <pre>{{ gloss }}</pre>
+  {% endif %}
+</body>
+</html>

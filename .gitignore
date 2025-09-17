@@ -1,0 +1,12 @@
+auth_app/
+10venv/
+__pycache__/
+*.pyc
+
+index_data
+*.db
+
+isl_dict.json
+
+.env
+

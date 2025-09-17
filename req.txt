@@ -1,0 +1,15 @@
+# FAISS CPU version (Windows compatible)
+faiss-cpu
+
+# Gemini / Google GenAI client
+google-genai
+
+# Numerical operations
+numpy
+
+# JSON handling (built-in, no need to install)
+# json is part of Python standard library
+
+# Optional but recommended if you extend to NLP preprocessing
+# spacy
+# nltk
